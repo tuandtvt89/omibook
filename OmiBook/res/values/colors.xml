@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="comic_background">#F5FAFF</color>
+    <color name="comic_list_selected">#BAEFCF</color>
+    <color name="comic_list_unselected">#BAEFCF</color>
+</resources>

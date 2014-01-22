@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_comic_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_gravity="center_horizontal"
+    android:background="@color/comic_list_selected">
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="120dp"
-        android:layout_height="100dp" >
+        android:layout_height="100dp"
+        android:layout_margin="5dp" 
+        android:padding="3dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/custom_border_background">
 
         <ImageView
             android:id="@+id/thumbImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:scaleType="fitXY"
             android:src="@drawable/thumb" />
     </RelativeLayout>
@@ -23,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/relativeLayout1"
-        android:layout_marginBottom="36dp"
         android:layout_toRightOf="@+id/relativeLayout1"
+        android:gravity="center_horizontal"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
