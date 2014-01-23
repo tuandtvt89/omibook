@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@color/comic_list_selected">
+    android:background="@color/comic_list_unselected">
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
