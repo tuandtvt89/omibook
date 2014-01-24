@@ -1,10 +1,14 @@
 package com.ominext.omibook.activity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -25,8 +29,11 @@ import android.widget.Toast;
 import com.ominext.omibook.helper.AlertDialogManager;
 import com.ominext.omibook.helper.DownloadFileFromURL;
 import com.ominext.omibook.helper.ImageLoader;
+import com.ominext.omibook.helper.ParsePlist;
 import com.ominext.omibook.helper.ServiceHandler;
+import com.ominext.omibook.helper.ParsePlist;
 import com.ominext.omibook.model.Comic;
+import com.ominext.omibook.model.ComicSubModel;
 import com.ominext.omibook.utils.Utils;
 import com.ominext.ominext.adapter.ComicListAdapter;
 
@@ -95,6 +102,18 @@ public class MainActivity extends Activity {
 			}
 		});
 		new GetComics().execute();
+
+		String xml = Utils.readPlistFromAssets(this);
+		ParsePlist parsePlist = new ParsePlist();
+		try {
+			parsePlist.parse(xml);
+		} catch (XmlPullParserException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -103,6 +122,8 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
+	
 
 	/**
 	 * Async task class to get json by making HTTP call

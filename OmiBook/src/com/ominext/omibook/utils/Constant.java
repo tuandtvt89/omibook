@@ -1,6 +1,5 @@
 package com.ominext.omibook.utils;
 
-
 public class Constant {
 	public static String APPLICATION_KEY;
 	public static String APP_BG_COLOR;
@@ -41,8 +40,16 @@ public class Constant {
 	public static String VIETID_LOGIN_SUCCESS;
 	public static String VIETID_LOGOUT;
 	public static int XLARGE_WIDTH_SCREEN;
+	public static String KEYPAGEINDEX;
+	public static String KEYPAGEIMAGE;
+	public static String KEYPAGEJAP;
+	public static String KEYPAGEENG;
 
 	static {
+		KEYPAGEENG = "PageDetails_English";
+		KEYPAGEJAP = "PageDetails_Japanese";
+		KEYPAGEIMAGE = "PageImage";
+		KEYPAGEINDEX = "PageIndex";
 		APP_COUNT_SEPARATOR = 4;
 		ONE_DAY_TO_MILISECOND = 86400000L;
 		LARGE_WIDTH_SCREEN = 640;
