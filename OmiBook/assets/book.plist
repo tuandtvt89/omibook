@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>PageIndex</key>
+		<integer>0</integer>
+		<key>PageImage</key>
+		<string>0110a.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　むかしむかし の、さむいさむい きたぐに での おはなし です。</string>
+		<key>PageDetails_English</key>
+		<string>　Once upon a time, in the cold, cold  northern lands…</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>1</integer>
+		<key>PageImage</key>
+		<string>0110d.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　あるところに、しげさく(もさく) と おのきち と いう きこり の おやこ が すんでいました。</string>
+		<key>PageDetails_English</key>
+		<string>　there lived an old logger named Shigesaku,  and his son, Onokichi.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>2</integer>
+		<key>PageImage</key>
+		<string>0110c.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　この おやこ、やま が すっぽり ゆき に つつまれるころ に なると、てっぽう を もって りょうに でかけていくのです。</string>
+		<key>PageDetails_English</key>
+		<string>　Every year, when the mountains  became white snow, they would take their rifle and go hunting.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>3</integer>
+		<key>PageImage</key>
+		<string>0110e.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　あるひ の こと、おやこ は いつものように ゆきやま へ はいっていきましたが、いつのまにか そら は くろぐもに おおわれて、ふぶき と なりました。</string>
+		<key>PageDetails_English</key>
+		<string>　One day, while they were out,  vicious clouds rolled in and they found themselves in the middle of a blizzard.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>4</integer>
+		<key>PageImage</key>
+		<string>0110f.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ふたり は なんとか、きこりごや を みつけました。</string>
+		<key>PageDetails_English</key>
+		<string>　Fortunately, they were able to find  a small hut.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>5</integer>
+		<key>PageImage</key>
+		<string>0110g.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「こんやは ここで とまる より、しかたあるめえ」</string>
+		<key>PageDetails_English</key>
+		<string>“We have no choice but to spend the  night here.”</string>
+		<key>PageDetails_Japanese</key>
+		<string>「うん だなあ」</string>
+		<key>PageDetails_English</key>
+		<string> 　The son agreed.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>6</integer>
+		<key>PageImage</key>
+		<string>0110i.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ちろちろ と もえる いろり の ひ に あたりながら、ふたり は ひるま の つれからか、すぐにねむりこんで しまいました。</string>
+		<key>PageDetails_English</key>
+		<string>　They were both tired, and while  listening to the crackling of the fire, soon fell asleep.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>7</integer>
+		<key>PageImage</key>
+		<string>0110h.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　かぜ の いきおい で と が がたん と ひらき、ゆき が まいこんできます。</string>
+		<key>PageDetails_English</key>
+		<string>　The hut’s door, pushed by the strong  wind, was slammed opened…</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>8</integer>
+		<key>PageImage</key>
+		<string>0110j.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そして、いろり の ひ が ふっと きえました。</string>
+		<key>PageDetails_English</key>
+		<string>　and in an instant the fire was put  out.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>9</integer>
+		<key>PageImage</key>
+		<string>0110k.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「う～、さむい！」</string>
+		<key>PageDetails_English</key>
+		<string>“Brrr…. It’s cold!”</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>10</integer>
+		<key>PageImage</key>
+		<string>0110l.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　あまり の さむさに め を さました おのきち は、そのとき、ひとかげ を みたのです。</string>
+		<key>PageDetails_English</key>
+		<string>　The chill awoke Onokichi, and it  was then that he saw the figure of a person.</string>
+		<key>PageDetails_Japanese</key>
+		<string>「だれじゃ、そこに おるのは？」</string>
+		<key>PageDetails_English</key>
+		<string>“Who is there?”</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>11</integer>
+		<key>PageImage</key>
+		<string>0110m.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そこに すがた を あらわしたのは、わかくうつしい おんなのひと でした。</string>
+		<key>PageDetails_English</key>
+		<string>　From the darkness emerged a young  and beautiful woman.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>12</integer>
+		<key>PageImage</key>
+		<string>0110n.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「ゆきおんな！」</string>
+		<key>PageDetails_English</key>
+		<string>“You are the Snow Woman!”</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ゆきおんな は ねむっている しげさく(もさく) の そば に たつと、くち から しろい いき を はきました。</string>
+		<key>PageDetails_English</key>
+		<string>　She stood above Shigesaku, and  began to slowly exhale a white frost.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>13</integer>
+		<key>PageImage</key>
+		<string>0110o.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　しげさく(もさく) の かお に しろいいき が かかると、しげさく(もさく) の からだ は だんだんと しろく かわっていきます。</string>
+		<key>PageDetails_English</key>
+		<string>　As the frost reached his face, his  body slowly became paler and paler.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>14</integer>
+		<key>PageImage</key>
+		<string>0110p.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そして ねむったまま、しずかに いき を ひきとってしまいました。</string>
+		<key>PageDetails_English</key>
+		<string>　The old man died peacefully in his  sleep.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>15</integer>
+		<key>PageImage</key>
+		<string>0110q.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ゆきおんな は、こんどは おのきち の ほうへと ちかづいてきます。</string>
+		<key>PageDetails_English</key>
+		<string>　The Snow Woman was now moving  toward Onokichi.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>16</integer>
+		<key>PageImage</key>
+		<string>0110r.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「たっ、たすけてくれー！」</string>
+		<key>PageDetails_English</key>
+		<string>“Please, spare me.”</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ひっしで にげようとする おのきち に、なぜか ゆきおんな は やさしく いいました。</string>
+		<key>PageDetails_English</key>
+		<string>　Just as he was about to try to run,  she spoke to him softly.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>17</integer>
+		<key>PageImage</key>
+		<string>0110s.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「そなた は まだ わかわかしく、いのち が かがやいています。</string>
+		<key>PageDetails_English</key>
+		<string>“You are young, and full of life.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　のぞみどおり、たすけてあげましょう。</string>
+		<key>PageDetails_English</key>
+		<string>　I will spare you.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　でも、こんや の こと を もしも だれか に はなしたら、そのときは、そなた の うつくしい いのち は おわってしまいましょう」</string>
+		<key>PageDetails_English</key>
+		<string>　But, if you should ever speak to  anyone of this night, your precious life will come to an end.”</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そういうと ゆきおんな は、ふりしきる ゆき の なか に すいこまれるよう に きえてしまいました。</string>
+		<key>PageDetails_English</key>
+		<string>　With that being said, the Snow  Woman became one with the blowing wind, and vanished.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　おのきち は、そのまま き を うしってしまいました。</string>
+		<key>PageDetails_English</key>
+		<string>　Onokichi fainted.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>18</integer>
+		<key>PageImage</key>
+		<string>0110t.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　やがて あさ に なり め が さめた おのきち は、ちち の しげさく(もさく) が こごえじんでいるの を みつけたのです。</string>
+		<key>PageDetails_English</key>
+		<string>　He awoke the next morning to find his dead father, lying beside him, frozen.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　それから、いちねん が たちました。</string>
+		<key>PageDetails_English</key>
+		<string>　One year later…</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>19</integer>
+		<key>PageImage</key>
+		<string>0110v.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ある おおあめ の ひ、おのきち の いえ の まえ に ひとり の おんなのひと が たっていました。</string>
+		<key>PageDetails_English</key>
+		<string>　on a very rainy day, there was a  young woman standing in front of Onokichi’s house.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>20</integer>
+		<key>PageImage</key>
+		<string>0110w.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「あめ で、こまって おいでじゃろう」</string>
+		<key>PageDetails_English</key>
+		<string>“You are soaking wet!.”</string>
+		<key>PageDetails_Japanese</key>
+		<string>　きだて の いい おのきち は、おんなのひと を いえ に いれてやりました。</string>
+		<key>PageDetails_English</key>
+		<string>　Being the kind man that he was, he  brought her in from the rain.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>21</integer>
+		<key>PageImage</key>
+		<string>0110x.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　おんなのひと は、おゆき と いう な でした。</string>
+		<key>PageDetails_English</key>
+		<string>　She said her name was Oyuki.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>22</integer>
+		<key>PageImage</key>
+		<string>0110y.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　おのきち と おゆき は ふうふ に なり、かわいいこども にも めぐまれて、それはそれは しあわせ でした。</string>
+		<key>PageDetails_English</key>
+		<string>　Onokichi and Oyuki were married,  and blessed with beautiful children. They had a very happy life.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>23</integer>
+		<key>PageImage</key>
+		<string>0110z.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　けれど、ちょっと しんぱい なのは、あついひざし を うけると、おゆき は ふらふら と たおれてしまうのです。</string>
+		<key>PageDetails_English</key>
+		<string>　The only problem was that Oyuki  couldn’t stand hot days. She would collapse in the heat.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>24</integer>
+		<key>PageImage</key>
+		<string>0110aa.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　でも、やさしい おのきち は、そんな おゆき を しっかりたすけて、なかよく くらしていました。</string>
+		<key>PageDetails_English</key>
+		<string>　But with the help of her tender and  caring husband, life went on as normal.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>25</integer>
+		<key>PageImage</key>
+		<string>0110ab.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そんな あるひ、はりしごと を している おゆき の よこがお を みて、おのきち は ふっと とおいひ の こと を おもいだしたのです。</string>
+		<key>PageDetails_English</key>
+		<string>　One day, as Onokichi was watching  his wife do needlework, he was reminded of that day, long ago.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>26</integer>
+		<key>PageImage</key>
+		<string>0110aca.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「のう、おゆき。わしは いぜんに、おまえ の ように うつくしい おなご を みたこと が ある。</string>
+		<key>PageDetails_English</key>
+		<string>“Oyuki, once before I have met a  woman of your beauty.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>27</integer>
+		<key>PageImage</key>
+		<string>0110ac.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　おまえ と、そっくりじゃった。</string>
+		<key>PageDetails_English</key>
+		<string>　You look just like her.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　やまで、ふぶきに あっての。</string>
+		<key>PageDetails_English</key>
+		<string>　It was in the mountains, in a  blizzard.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そのときじゃ、あれは たしか、ゆきおんな」</string>
+		<key>PageDetails_English</key>
+		<string>　She was the Snow Woman.”</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>28</integer>
+		<key>PageImage</key>
+		<string>0110ad.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　すると とつぜん、おゆき が かなしそうに いいました。</string>
+		<key>PageDetails_English</key>
+		<string>　Oyuki became noticeably sad. She  said to her husband…</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>29</integer>
+		<key>PageImage</key>
+		<string>0110ae.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「あなた、とうとう はなしてしまったのね。あれほど やくそくしたのに」</string>
+		<key>PageDetails_English</key>
+		<string>“I have always feared that you  would one day break our promise.”</string>
+		<key>PageDetails_Japanese</key>
+		<string>「どうしたんだ、おゆき？」</string>
+		<key>PageDetails_English</key>
+		<string>”Oyuki, what are  you saying?”</string>
+		<key>PageDetails_Japanese</key>
+		<string>　おゆき の きものは、いつのまにか しろく かわっています。</string>
+		<key>PageDetails_English</key>
+		<string>　Before his eyes, Oyuki’s clothes  became the color of the snow.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　ゆきおんな で ある おゆき は、あのよる の ことを はなされてしまったので、もう にんげん で いることが できないのです。</string>
+		<key>PageDetails_English</key>
+		<string>“Because you have spoken of that  day, it is no longer possible for me to live as a human.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>30</integer>
+		<key>PageImage</key>
+		<string>0110af.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>「あなた の ことは、いつまでも わすれません。</string>
+		<key>PageDetails_English</key>
+		<string>　I will never forget you.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　とても、しあわせ でした。</string>
+		<key>PageDetails_English</key>
+		<string>　Thank you for everything.</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>31</integer>
+		<key>PageImage</key>
+		<string>0110ag.gif</string>
+		<key>PageDetails_Japanese</key>
+		<string>　        こどもを、おねがいしますよ。</string>
+		<key>PageDetails_English</key>
+		<string>　Please take care of our children.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　・・・では、さようなら」</string>
+		<key>PageDetails_English</key>
+		<string>　Goodbye…”</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>32</integer>
+		<key>PageImage</key>
+		<string></string>
+		<key>PageDetails_Japanese</key>
+		<string>　そのとき、と が ばたん と ひらいて、つめたいかぜ が ふきこんできました。</string>
+		<key>PageDetails_English</key>
+		<string>　A cold wind opened the door with a  slam.</string>
+		<key>PageDetails_Japanese</key>
+		<string>　そして、おゆき の すがたは、きえたのです。</string>
+		<key>PageDetails_English</key>
+		<string>　Then, the Snow Woman became one with the wind, and vanished forever. </string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>33</integer>
+		<key>PageImage</key>
+		<string></string>
+		<key>PageDetails_Japanese</key>
+		<string>おまけ(Extra)　 その後(Subsequent talk)</string>
+	</dict>
+	<dict>
+		<key>PageIndex</key>
+		<integer>34</integer>
+		<key>PageImage</key>
+		<string></string>
+		<key>PageDetails_Japanese</key>
+		<string>　One-point advice</string>
+		<key>PageDetails_English</key>
+		<string>　The Japanese word for snow is “yuki”. The  wife’s name, Oyuki, is a kind of play on words.</string>
+	</dict>
+</array>
+</plist>
