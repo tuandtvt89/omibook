@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -71,14 +72,14 @@ public class MainActivity extends Activity {
 	// image loader
 	public ImageLoader imageLoader;
 	// conten layout
-	public RelativeLayout contentLayout;
+	public ImageButton thumbPlayBtn;
 
 	public int currentSelector;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.stories_list);
 		Utils.createFolder(getApplicationContext());
 		currentSelector = 0;
 		comicLv = (ListView) findViewById(R.id.comicLv);
@@ -86,8 +87,9 @@ public class MainActivity extends Activity {
 		descriptionTv = (TextView) findViewById(R.id.descriptionTv);
 		comicList = new ArrayList<Comic>();
 		imageLoader = new ImageLoader(getApplicationContext());
-		contentLayout = (RelativeLayout) findViewById(R.id.contenLayout);
-		contentLayout.setOnClickListener(new OnClickListener() {
+		thumbPlayBtn = (ImageButton) findViewById(R.id.thumbPlayBtn);
+		
+		thumbPlayBtn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
@@ -97,12 +99,17 @@ public class MainActivity extends Activity {
 				Utils.createComicFolder(getApplicationContext(),
 						comicList.get(currentSelector).getId());
 				new DownloadFileFromURL(MainActivity.this, comicList.get(
-						currentSelector).getId(), 0).execute(comicList.get(
-						currentSelector).getContentUrl());
+						currentSelector).getId(), 0).execute(
+						comicList.get(currentSelector).getContentUrl(),
+						comicList.get(currentSelector).getThumbUrl());
 			}
 		});
 		new GetComics().execute();
 
+		/*
+		 * Demo reading Plist file in Asset folder Parse Plist ->
+		 * ArrayList<Object>
+		 */
 		String xml = Utils.readPlistFromAssets(this);
 		ParsePlist parsePlist = new ParsePlist();
 		try {
@@ -122,8 +129,6 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-	
 
 	/**
 	 * Async task class to get json by making HTTP call

@@ -1,10 +1,12 @@
 package com.ominext.omibook.utils;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 
-import android.R.string;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -88,5 +90,34 @@ public class Utils {
 			Toast.makeText(context, "folder is exist", Toast.LENGTH_SHORT)
 					.show();
 		}
+	}
+
+	public static String readPlistFromAssets(Context mContext) {
+
+		StringBuffer sb = new StringBuffer();
+		BufferedReader br = null;
+
+		try {
+			br = new BufferedReader(new InputStreamReader(mContext.getAssets()
+					.open("book.plist")));
+			String temp;
+
+			while ((temp = br.readLine()) != null)
+				sb.append(temp);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				br.close(); // stop reading
+
+			} catch (IOException ex) {
+				ex.printStackTrace();
+
+			}
+		}
+		return sb.toString();
+
 	}
 }
