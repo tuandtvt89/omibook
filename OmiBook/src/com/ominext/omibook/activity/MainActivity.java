@@ -5,11 +5,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 
+import com.ominext.omibook.helper.AlertDialogManager;
 import com.ominext.omibook.helper.ServiceHandler;
 
 public class MainActivity extends Activity {
@@ -27,6 +29,11 @@ public class MainActivity extends Activity {
 
 	// contacts JSONArray
 	JSONArray contacts = null;
+
+	// Alert dialog manager
+	AlertDialogManager alert = new AlertDialogManager();
+	// Progress Dialog
+	private ProgressDialog pDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,10 +58,11 @@ public class MainActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			// Showing progress dialog
-			// pDialog = new ProgressDialog(MainActivity.this);
-			// pDialog.setMessage("Please wait...");
-			// pDialog.setCancelable(false);
-			// pDialog.show();
+			pDialog = new ProgressDialog(getBaseContext());
+			pDialog.setMessage("Đang tải ...");
+			pDialog.setIndeterminate(false);
+			pDialog.setCancelable(false);
+			pDialog.show();
 
 		}
 
@@ -74,7 +82,7 @@ public class MainActivity extends Activity {
 
 					// Getting JSON Array node
 					contacts = jsonObj.getJSONArray("data");
-					Log.d("lenght", ""+contacts.length());
+					Log.d("lenght", "" + contacts.length());
 					// looping through All Contacts
 					for (int i = 0; i < contacts.length(); i++) {
 						JSONObject c = contacts.getJSONObject(i);
@@ -103,6 +111,8 @@ public class MainActivity extends Activity {
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
 			// Dismiss the progress dialog
+			// dismiss the dialog after getting all tracks
+			pDialog.dismiss();
 		}
 
 	}
