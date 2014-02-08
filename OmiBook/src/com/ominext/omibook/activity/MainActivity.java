@@ -12,13 +12,17 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ominext.omibook.helper.AlertDialogManager;
+import com.ominext.omibook.helper.ImageLoader;
 import com.ominext.omibook.helper.ServiceHandler;
 import com.ominext.omibook.model.Comic;
 import com.ominext.ominext.adapter.ComicListAdapter;
@@ -48,13 +52,22 @@ public class MainActivity extends Activity {
 	// list view
 	private ListView comicLv;
 	private ComicListAdapter adapter;
+	//content View
+	private ImageView thumbImg;
+	private TextView descriptionTv;
+	
+	//image loader
+	public ImageLoader imageLoader;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		comicLv = (ListView) findViewById(R.id.comicLv);
+		thumbImg = (ImageView)findViewById(R.id.thumbImg);
+		descriptionTv = (TextView)findViewById(R.id.descriptionTv);
 		comicList = new ArrayList<Comic>();
+		imageLoader = new ImageLoader(getApplicationContext());
 		new GetComics().execute();
 	}
 
@@ -148,8 +161,8 @@ public class MainActivity extends Activity {
 						@Override
 						public void onItemClick(AdapterView<?> parent,
 								View view, int position, long id) {
-							Toast.makeText(MainActivity.this, "Hello",
-									Toast.LENGTH_LONG).show();
+							descriptionTv.setText(comicList.get(position).getDescription());
+							imageLoader.DisplayImage(comicList.get(position).getThumbUrl(), thumbImg);
 						}
 					});
 				}
