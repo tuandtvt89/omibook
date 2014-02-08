@@ -1,5 +1,7 @@
 package com.ominext.omibook.activity;
 
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,9 +12,16 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.ominext.omibook.helper.AlertDialogManager;
 import com.ominext.omibook.helper.ServiceHandler;
+import com.ominext.omibook.model.Comic;
+import com.ominext.ominext.adapter.ComicListAdapter;
 
 public class MainActivity extends Activity {
 	// URL to get contacts JSON
@@ -34,11 +43,18 @@ public class MainActivity extends Activity {
 	AlertDialogManager alert = new AlertDialogManager();
 	// Progress Dialog
 	private ProgressDialog pDialog;
+	// list comics
+	private ArrayList<Comic> comicList;
+	// list view
+	private ListView comicLv;
+	private ComicListAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		comicLv = (ListView) findViewById(R.id.comicLv);
+		comicList = new ArrayList<Comic>();
 		new GetComics().execute();
 	}
 
@@ -58,7 +74,7 @@ public class MainActivity extends Activity {
 		protected void onPreExecute() {
 			super.onPreExecute();
 			// Showing progress dialog
-			pDialog = new ProgressDialog(getBaseContext());
+			pDialog = new ProgressDialog(MainActivity.this);
 			pDialog.setMessage("Đang tải ...");
 			pDialog.setIndeterminate(false);
 			pDialog.setCancelable(false);
@@ -86,16 +102,22 @@ public class MainActivity extends Activity {
 					// looping through All Contacts
 					for (int i = 0; i < contacts.length(); i++) {
 						JSONObject c = contacts.getJSONObject(i);
-
+						Comic comicItem = new Comic();
 						// Comic node is JSON Object
 						JSONObject comic = c.getJSONObject(TAG_COMICS);
 						String name = comic.getString(TAG_NAME);
+						comicItem.setName(name);
 						String file = comic.getString(TAG_FILE);
+						comicItem.setContentUrl(file);
 						String thumb = comic.getString(TAG_THUMB);
+						comicItem.setThumbUrl(thumb);
 						String description = comic.getString(TAG_DESCRIPTION);
-						// Comic node is JSON Object
+						comicItem.setDescription(description);
+						// Category node is JSON Object
 						JSONObject category = c.getJSONObject(TAG_CATEGORY);
 						String name_cat = category.getString(TAG_NAME_CAT);
+						comicItem.setCat_name(name_cat);
+						comicList.add(comicItem);
 					}
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -113,6 +135,25 @@ public class MainActivity extends Activity {
 			// Dismiss the progress dialog
 			// dismiss the dialog after getting all tracks
 			pDialog.dismiss();
+			// updating UI from Background Thread
+			MainActivity.this.runOnUiThread(new Runnable() {
+				public void run() {
+					// Getting adapter by passing xml data ArrayList
+					adapter = new ComicListAdapter(MainActivity.this, comicList);
+					comicLv.setAdapter(adapter);
+
+					// Click event for single list row
+					comicLv.setOnItemClickListener(new OnItemClickListener() {
+
+						@Override
+						public void onItemClick(AdapterView<?> parent,
+								View view, int position, long id) {
+							Toast.makeText(MainActivity.this, "Hello",
+									Toast.LENGTH_LONG).show();
+						}
+					});
+				}
+			});
 		}
 
 	}

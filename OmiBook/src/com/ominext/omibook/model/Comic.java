@@ -1,6 +1,5 @@
 package com.ominext.omibook.model;
 
-import android.R.string;
 
 public class Comic {
 	
@@ -11,6 +10,8 @@ public class Comic {
 	private String thumbUrl;
 	
 	private String contentUrl;
+	
+	private String cat_name;
 
 	public String getName() {
 		return name;
@@ -42,6 +43,14 @@ public class Comic {
 
 	public void setContentUrl(String contentUrl) {
 		this.contentUrl = contentUrl;
+	}
+
+	public String getCat_name() {
+		return cat_name;
+	}
+
+	public void setCat_name(String cat_name) {
+		this.cat_name = cat_name;
 	}
 
 }
