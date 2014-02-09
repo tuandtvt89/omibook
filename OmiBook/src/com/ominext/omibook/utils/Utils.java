@@ -1,10 +1,14 @@
 package com.ominext.omibook.utils;
 
+import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
+
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Environment;
+import android.widget.Toast;
 
 public class Utils {
 
@@ -26,6 +30,7 @@ public class Utils {
 				return true;
 		}
 	}
+
 	public static boolean isWifiAvailable(Context paramContext) {
 		NetworkInfo localNetworkInfo = ((ConnectivityManager) paramContext
 				.getSystemService("connectivity")).getNetworkInfo(1);
@@ -43,6 +48,25 @@ public class Utils {
 				os.write(bytes, 0, count);
 			}
 		} catch (Exception ex) {
+		}
+	}
+
+	public static void createFolder(Context context) {
+		// create new folder
+		File folder = new File(Environment.getExternalStorageDirectory()
+				+ "/Omibook");
+		boolean success = true;
+		if (!folder.exists()) {
+			success = folder.mkdir();
+		}
+		if (success) {
+			// Do something on success
+			Toast.makeText(context, "folder is create successfully",
+					Toast.LENGTH_SHORT).show();
+		} else {
+			// Do something else on failure
+			Toast.makeText(context, "folder is exist", Toast.LENGTH_SHORT)
+					.show();
 		}
 	}
 }

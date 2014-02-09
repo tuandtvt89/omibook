@@ -12,25 +12,29 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.TextureView;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ominext.omibook.helper.AlertDialogManager;
+import com.ominext.omibook.helper.DownloadFileFromURL;
 import com.ominext.omibook.helper.ImageLoader;
 import com.ominext.omibook.helper.ServiceHandler;
 import com.ominext.omibook.model.Comic;
+import com.ominext.omibook.utils.Utils;
 import com.ominext.ominext.adapter.ComicListAdapter;
 
 public class MainActivity extends Activity {
 	// URL to get contacts JSON
 	private static String url = "http://dev.ominext.com/omibook/comic/getListComic";
-
+	// File url to download
+	private static String file_url = "http://api.androidhive.info/progressdialog/hive.jpg";
 	// JSON Node names
 	private static final String TAG_COMICS = "Comic";
 	private static final String TAG_NAME = "name";
@@ -52,22 +56,39 @@ public class MainActivity extends Activity {
 	// list view
 	private ListView comicLv;
 	private ComicListAdapter adapter;
-	//content View
+	// content View
 	private ImageView thumbImg;
 	private TextView descriptionTv;
-	
-	//image loader
+
+	// image loader
 	public ImageLoader imageLoader;
+	// conten layout
+	public RelativeLayout contentLayout;
+	
+	public int currentSelector;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Utils.createFolder(getApplicationContext());
+		currentSelector = 0;
 		comicLv = (ListView) findViewById(R.id.comicLv);
-		thumbImg = (ImageView)findViewById(R.id.thumbImg);
-		descriptionTv = (TextView)findViewById(R.id.descriptionTv);
+		thumbImg = (ImageView) findViewById(R.id.thumbImg);
+		descriptionTv = (TextView) findViewById(R.id.descriptionTv);
 		comicList = new ArrayList<Comic>();
 		imageLoader = new ImageLoader(getApplicationContext());
+		contentLayout = (RelativeLayout) findViewById(R.id.contenLayout);
+		contentLayout.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplicationContext(), "view",
+						Toast.LENGTH_LONG).show();
+				new DownloadFileFromURL(MainActivity.this).execute(comicList.get(currentSelector).getContentUrl());
+			}
+		});
 		new GetComics().execute();
 	}
 
@@ -161,14 +182,15 @@ public class MainActivity extends Activity {
 						@Override
 						public void onItemClick(AdapterView<?> parent,
 								View view, int position, long id) {
-							descriptionTv.setText(comicList.get(position).getDescription());
-							imageLoader.DisplayImage(comicList.get(position).getThumbUrl(), thumbImg);
+							descriptionTv.setText(comicList.get(position)
+									.getDescription());
+							imageLoader.DisplayImage(comicList.get(position)
+									.getThumbUrl(), thumbImg);
+							currentSelector = position;
 						}
 					});
 				}
 			});
 		}
-
 	}
-
 }
