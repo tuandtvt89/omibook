@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import android.R.string;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -55,6 +56,25 @@ public class Utils {
 		// create new folder
 		File folder = new File(Environment.getExternalStorageDirectory()
 				+ "/Omibook");
+		boolean success = true;
+		if (!folder.exists()) {
+			success = folder.mkdir();
+		}
+		if (success) {
+			// Do something on success
+			Toast.makeText(context, "folder is create successfully",
+					Toast.LENGTH_SHORT).show();
+		} else {
+			// Do something else on failure
+			Toast.makeText(context, "folder is exist", Toast.LENGTH_SHORT)
+					.show();
+		}
+	}
+
+	public static void createComicFolder(Context context, String folderName) {
+		// create new folder
+		File folder = new File(Environment.getExternalStorageDirectory()
+				+ "/Omibook/" + folderName);
 		boolean success = true;
 		if (!folder.exists()) {
 			success = folder.mkdir();

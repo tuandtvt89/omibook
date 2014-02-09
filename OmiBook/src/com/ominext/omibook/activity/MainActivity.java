@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
 	private static String file_url = "http://api.androidhive.info/progressdialog/hive.jpg";
 	// JSON Node names
 	private static final String TAG_COMICS = "Comic";
+	private static final String TAG_ID = "id";
 	private static final String TAG_NAME = "name";
 	private static final String TAG_DESCRIPTION = "description";
 	private static final String TAG_THUMB = "thumb";
@@ -64,7 +65,7 @@ public class MainActivity extends Activity {
 	public ImageLoader imageLoader;
 	// conten layout
 	public RelativeLayout contentLayout;
-	
+
 	public int currentSelector;
 
 	@Override
@@ -86,7 +87,11 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Toast.makeText(getApplicationContext(), "view",
 						Toast.LENGTH_LONG).show();
-				new DownloadFileFromURL(MainActivity.this).execute(comicList.get(currentSelector).getContentUrl());
+				Utils.createComicFolder(getApplicationContext(),
+						comicList.get(currentSelector).getId());
+				new DownloadFileFromURL(MainActivity.this, comicList.get(
+						currentSelector).getId(), 0).execute(comicList.get(
+						currentSelector).getContentUrl());
 			}
 		});
 		new GetComics().execute();
@@ -141,6 +146,8 @@ public class MainActivity extends Activity {
 						JSONObject comic = c.getJSONObject(TAG_COMICS);
 						String name = comic.getString(TAG_NAME);
 						comicItem.setName(name);
+						String id = comic.getString(TAG_ID);
+						comicItem.setId(id);
 						String file = comic.getString(TAG_FILE);
 						comicItem.setContentUrl(file);
 						String thumb = comic.getString(TAG_THUMB);

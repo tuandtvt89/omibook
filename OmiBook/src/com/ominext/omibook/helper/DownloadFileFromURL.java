@@ -10,6 +10,7 @@ import java.net.URLConnection;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.graphics.AvoidXfermode.Mode;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -21,14 +22,20 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
 	public static final int progress_bar_type = 0;
 	// Activity
 	private Activity activity;
+	// Activity
+	private String id;
+	// mode download 0: zip file 1: image file
+	private int downloadMode;
 
 	/**
 	 * 
 	 * @param constructor
 	 */
-	public DownloadFileFromURL(Activity activity) {
+	public DownloadFileFromURL(Activity activity, String id, int dowloadMode) {
 		// TODO Auto-generated constructor stub
 		this.activity = activity;
+		this.id = id;
+		this.downloadMode = dowloadMode;
 	}
 
 	/**
@@ -38,13 +45,15 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
 	@Override
 	protected void onPreExecute() {
 		super.onPreExecute();
-		pDialog = new ProgressDialog(activity);
-		pDialog.setMessage("Downloading file. Please wait...");
-		pDialog.setIndeterminate(false);
-		pDialog.setMax(100);
-		pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		pDialog.setCancelable(true);
-		pDialog.show();
+		if (downloadMode == 0) {
+			pDialog = new ProgressDialog(activity);
+			pDialog.setMessage("Downloading file. Please wait...");
+			pDialog.setIndeterminate(false);
+			pDialog.setMax(100);
+			pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			pDialog.setCancelable(true);
+			pDialog.show();
+		}
 	}
 
 	/**
@@ -63,8 +72,12 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
 			// input stream to read file - with 8k buffer
 			InputStream input = new BufferedInputStream(url.openStream(), 8192);
 			// Output stream to write file
-			OutputStream output = new FileOutputStream(
-					"/sdcard/Omibook/downloadedfile.zip");
+			String path;
+			if (this.downloadMode == 0)
+				path = "/sdcard/Omibook/" + id + "/" + id + "_thumb.gif";
+			else
+				path = "/sdcard/Omibook/" + id + "/" + id + "_content.zip";
+			OutputStream output = new FileOutputStream(path);
 			byte data[] = new byte[1024];
 			long total = 0;
 			while ((count = input.read(data)) != -1) {
@@ -91,7 +104,8 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
 	 * */
 	protected void onProgressUpdate(String... progress) {
 		// setting progress percentage
-		pDialog.setProgress(Integer.parseInt(progress[0]));
+		if (downloadMode == 0)
+			pDialog.setProgress(Integer.parseInt(progress[0]));
 	}
 
 	/**
@@ -101,6 +115,7 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
 	@Override
 	protected void onPostExecute(String file_url) {
 		// dismiss the dialog after the file was downloaded
-		pDialog.dismiss();
+		if (downloadMode == 0)
+			pDialog.dismiss();
 	}
 }

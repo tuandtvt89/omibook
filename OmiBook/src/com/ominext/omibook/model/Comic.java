@@ -5,6 +5,8 @@ public class Comic {
 	
 	private String name;
 	
+	private String id;
+	
 	private String description;
 	
 	private String thumbUrl;
@@ -51,6 +53,14 @@ public class Comic {
 
 	public void setCat_name(String cat_name) {
 		this.cat_name = cat_name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }
